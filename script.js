@@ -193,10 +193,15 @@ $("button").click((event) => {
   event.preventDefault();
   let textInput = document.getElementById("textInput").value;
   let numberInput = document.getElementById("numberInput").value;
-
   let createParagraph = document.createElement("p");
 
+  if (numberInput > 2) {
+    $(createParagraph).css("backgroundColor", "red");
+  }
+
   createParagraph.innerHTML = `${textInput} ${numberInput}`;
+  $("textInput").css("backgroundColor", "red");
+
   $("body").append(createParagraph);
   console.log(createParagraph);
   console.log(textInput);
