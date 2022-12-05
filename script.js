@@ -147,15 +147,30 @@
 //Forms
 //1. Lägg till element
 //a)
+// let form = document.querySelectorAll("form");
+// let button = document.querySelectorAll("button");
+
+// $("button").click((event) => {
+//   event.preventDefault();
+//   let input = document.querySelector("input").value;
+//   console.log(input);
+//   let header = document.createElement("h1");
+//   header.innerHTML = `${input}`;
+//   $("body").append(header);
+//   console.log(header);
+// });
+
+//2. Lägg till lista
+//a)
 let form = document.querySelectorAll("form");
 let button = document.querySelectorAll("button");
 
 $("button").click((event) => {
   event.preventDefault();
   let input = document.querySelector("input").value;
-  console.log(input);
-  let header = document.createElement("h1");
-  header.innerHTML = `${input}`;
-  $("body").append(header);
-  console.log(header);
+  let list = document.createElement("li");
+  list.innerHTML = `sup`;
+  console.log($('#nisse #email'))
+  console.log(`${input}`);
+  $("body").append(list);
 });
