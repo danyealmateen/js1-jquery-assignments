@@ -162,15 +162,43 @@
 
 //2. Lägg till lista
 //a)
-let form = document.querySelectorAll("form");
-let button = document.querySelectorAll("button");
+// let form = document.querySelectorAll("form");
+// let button = document.querySelectorAll("button");
+// let list = document.createElement("ol");
+
+// $("body").append(list);
+
+// $("button").click((event) => {
+//   clearContainer();
+//   event.preventDefault();
+//   let textInput = document.getElementById("textInput").value;
+//   let input = document.querySelector("input").value;
+//   for (let i = 1; i <= `${input}`; i++) {
+//     let list = document.createElement("li");
+//     list.setAttribute("id", "theList");
+//     list.innerHTML = `${textInput}`;
+//     $("ol")[0].append(list);
+//   }
+// });
+
+// function clearContainer() {
+//   list.innerHTML = "";
+// }
+
+//3. Handlingslista
+//a
+let button = document.getElementById("button");
 
 $("button").click((event) => {
   event.preventDefault();
-  let input = document.querySelector("input").value;
-  let list = document.createElement("li");
-  list.innerHTML = `sup`;
-  console.log($('#nisse #email'))
-  console.log(`${input}`);
-  $("body").append(list);
+  let textInput = document.getElementById("textInput").value;
+  let numberInput = document.getElementById("numberInput").value;
+
+  let createParagraph = document.createElement("p");
+
+  createParagraph.innerHTML = `${textInput} ${numberInput}`;
+  $("body").append(createParagraph);
+  console.log(createParagraph);
+  console.log(textInput);
+  console.log(numberInput);
 });
