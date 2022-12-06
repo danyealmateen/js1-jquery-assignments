@@ -191,6 +191,12 @@ let button = document.getElementById("button");
 
 $("button").click((event) => {
   event.preventDefault();
+
+  //Lägg till en eventlistener på varje element så att när man klickar på elementet så tas det bort från DOM:en.
+  $("button").click((event) => {
+    event.preventDefault();
+  });
+
   let textInput = document.getElementById("textInput").value;
   let numberInput = document.getElementById("numberInput").value;
   let createParagraph = document.createElement("p");
@@ -201,7 +207,6 @@ $("button").click((event) => {
 
   createParagraph.innerHTML = `${textInput} ${numberInput}`;
   $("textInput").css("backgroundColor", "red");
-
   $("body").append(createParagraph);
   console.log(createParagraph);
   console.log(textInput);
